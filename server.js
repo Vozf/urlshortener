@@ -7,7 +7,9 @@ var mongo = require('mongodb').MongoClient;
 var i=1;
 app.get("/",function(req,res){
     
-    res.end("Enter link");
+    res.write("<p>Enter link in /new like this</p>");
+    var lin='https://urlshortener-vozf.c9users.io/new/https://vk.com/feed';
+    res.end('<a href="'+lin+'">'+lin+'</a>');   
 });
 app.get("/:id",function(req,res){
     var id=+req.params.id;
